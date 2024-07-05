@@ -10,12 +10,11 @@ def convert_to_icon(image_path):
     image = image.resize((256, 256), resample=Image.BICUBIC)
    
     # 파일명 생성
-    file_name = os.path.splitext(os.path.basename(image_path))
+    file_name, file_ext = os.path.splitext(os.path.basename(image_path))
     icon_path = os.path.join(os.path.dirname(image_path), f"{file_name}.ico") 
     
     # 아이콘 파일 저장
     image.save(icon_path, format="ICO")
-
     return os.path.splitext(image_path)[0] + ".ico"
 
 def main():
