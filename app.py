@@ -3,6 +3,8 @@ from PIL import Image
 import streamlit as st
 import tempfile
 
+st.set_page_config(page_title="make icon", page_icon="✅")
+
 ICON_SIZES = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128)]
 
 def convert_to_icon(image_path):
